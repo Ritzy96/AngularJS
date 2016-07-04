@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<meta charset="ISO-8859-1">
+<title>AngJS_demo  </title>
+</head>
+<body ng-app="" ng-init="price=0;qty=0">
+
+<!--  Enter your first name: <input type="text" ng-model="firstname"><br>
+Enter your last name: <input type="text" ng-model="lastname"><br>
+Hello Mr/Ms: {{firstname+ " "+lastname}}-->
+
+Price &nbsp;:<input type="number" ng-model="price"><br><br>
+Qty &nbsp;&nbsp;&nbsp;:<input type="number" ng-model="qty"><br><br>
+
+Total&nbsp;&nbsp;: {{price*qty}}
+
+<p ng-bind="price*qty"></p>
+
+</body>
+</html>

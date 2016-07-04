@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="personCtrl">
+
+<p>The first name is {{ firstName | uppercase }}</p>
+<p> The last name is {{ lastName | uppercase}}</p>
+<p> ABOUT ME: {{ description | lowercase}}</p>
+
+<form>
+  Select a hobby:
+  <select ng-model="myVar">
+    <option value="">
+    <option value="biking">Biking
+    <option value="horse-riding">Horse-back Riding
+    <option value="archery">Archery
+  </select>
+</form>
+
+<div ng-switch="myVar">
+  <div ng-switch-when="biking">
+     <h1>BIKING</h1>
+     <p>Love bikes... Sounds so cool and thrilling.</p>
+  </div>
+  <div ng-switch-when="horse-riding">
+     <h1>HORSE-BACK RIDING</h1>
+     <p>Horses are magnificent...must be lucky to learn how to ride one.</p>
+  </div>
+  <div ng-switch-when="archery">
+     <h1>ARCHERY</h1>
+     <p>This one needs a lot of focus... hope u hit the bull's eye .</p>
+  </div>
+</div>
+
+
+</div>
+
+<script>
+angular.module('myApp', []).controller('personCtrl', function($scope) {
+    $scope.firstName = "John",
+    $scope.lastName = "Doe"
+    $scope.description="HI I'M A GUY AND I'M FROM USA. "
+});
+</script>
+
+</body>
+</html>
+

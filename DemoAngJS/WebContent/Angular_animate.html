@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<style>
+.first {
+  transition: all linear 0.5s;
+  background-color: yellow;
+  height: 100px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.second{
+ transition: all linear 0.5s;
+  background-color: red;
+  height: 100px;
+}
+
+.ng-hide {
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  top:-200px;
+  left: 200px;
+}
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+
+<body ng-app="myApp">
+
+<h1>Check the Box1: <input type="checkbox" ng-model="myCheck1"></h1>
+
+<div class="first" ng-hide="myCheck1"></div>
+
+
+<h1>Check the Box2: <input type="checkbox" ng-model="myCheck2"></h1>
+
+<div class="second" ng-hide="myCheck2"></div>
+
+
+<script>
+var app = angular.module('myApp', ['ngAnimate']);
+</script>
+
+</body>
+</html>
+
